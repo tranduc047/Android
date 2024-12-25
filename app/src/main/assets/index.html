@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive WebView App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<h1>WebView Interactive App</h1>
+<p>Chào mừng bạn đến với ứng dụng tương tác WebView.</p>
+<button onclick="sendMessageToJava()">Gửi tin nhắn tới Java</button>
+<script>
+    function sendMessageToJava() {
+        if (window.Android) {
+            window.Android.showToast("Tin nhắn từ JavaScript!");
+        }
+    }
+</script>
+</body>
+</html>
